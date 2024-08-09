@@ -33,12 +33,13 @@ const List = props => {
 		]
         }
     ]);
-    console.log(columns);
+
     const addColumn = newColumn => {
-        setColumns([...columns, {id: shortid(), title: newColumn.title, icon: newColumn.icon}]); // props.handleSubmit({title: value}); 
+        setColumns([...columns, {id: shortid(), title: newColumn.title, icon: newColumn.icon, cards: []}]); // props.handleSubmit({title: value}); 
         // czyli newColumn to jest obiekt, z niego bierzemy klucz title, a jego właściwość to będzie właśnie value pochodzące z inputu
     }
 
+    console.log('columns', columns);
     const addCard = (newCard, columnId) => {
         const columnsUpdated = columns.map(column => {
             if(column.id === columnId)
@@ -60,7 +61,6 @@ const List = props => {
             <section className={styles.columns}>
                 {console.log(columns)}
                 {columns.map(column => <Column key={column.id} id={column.id} title={column.title} icon={column.icon} cards={column.cards} addCard={addCard}/>)}
-
             </section>
             <ColumnForm action={addColumn} />
         </div>

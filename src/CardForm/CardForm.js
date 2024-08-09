@@ -13,7 +13,6 @@ const CardForm = props => {
 
     return(
         <form onSubmit={handleSubmit}>
-        {console.log(props)}
         Title: <TextInput value={title} onChange={e => setTitle(e.target.value)} />
         <Button>Add column</Button>
         </form>
