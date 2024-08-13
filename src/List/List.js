@@ -3,9 +3,10 @@ import Column from '../Column/Column';
 import ColumnForm from '../ColumnForm/ColumnForm';
 import { useState } from 'react';
 import { useSelector } from 'react-redux';
+import { getFilteredColumns } from '../redux/store';
 
 const List = props => {
-    const columns = useSelector(state => state.columns);
+    const columns = useSelector(getFilteredColumns);
 
     return (
         <div className={styles.list}>
