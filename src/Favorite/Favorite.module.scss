@@ -1,0 +1,17 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    text-align: center;
+}
+
+.bottom-left {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+}
+
+h3 {
+    margin: 0;
+}

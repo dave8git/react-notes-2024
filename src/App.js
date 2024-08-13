@@ -1,16 +1,21 @@
-import Hero from './Hero/Hero';
-import SearchForm from './SearchForm/SearchForm';
-import List from './List/List';
 import Container from './Container/Container';
 import styles from './Container/Container.module.scss';
+import NavBar from './NavBar/NavBar';
+import Home from './Home/Home';
+import About from './About/About';
+import Favorite from './Favorite/Favorite';
+
 
 const App = () => {
   return (
-    <Container>
-      <Hero />
-      <SearchForm />
-      <List />
-    </Container>
+    <>
+      <NavBar />
+      <Container>
+        <Home />
+        <About />
+        <Favorite />
+      </Container>
+    </>
   );
 };
 
