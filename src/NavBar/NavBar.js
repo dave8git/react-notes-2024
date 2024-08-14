@@ -5,7 +5,7 @@ const NavBar = () => {
     return (
         <nav className={styles.navbar}>
              <div className={styles["nav-icon"]}>
-                <i className="fas fa-user"></i>
+             <i className="fas fa-user"></i>
             </div>
             <div className="nav-links">
                 <a href="/">Home</a>
