@@ -8,9 +8,7 @@ const Column = props => {
 
     const cards = useSelector(state => getFilteredCards(state, props.id));
     
-    console.log('serarchString', searchString);
-
-    console.log('cards', cards);
+    console.log('column props', props);
 
     return (
         <article className={styles.column}>
@@ -18,7 +16,7 @@ const Column = props => {
             <ul className={styles.cards}>
                 {cards.map(card =>  <Card key={card.id} title={card.title} />)}
             </ul>
-            <CardForm columnId={props.id} action={props.addCard} />
+            <CardForm columnId={props.id} action={props.addCard} listId={props.listId} />
         </article>
     );
 };

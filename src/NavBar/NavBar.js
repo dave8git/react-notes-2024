@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom';
 import styles from './NavBar.module.scss';
 
 const NavBar = () => {
@@ -8,9 +9,9 @@ const NavBar = () => {
              <i className="fas fa-user"></i>
             </div>
             <div className="nav-links">
-                <a href="/">Home</a>
-                <a href="/about">About</a>
-                <a href="/favorite">Favorite</a>
+                <NavLink className={({ isActive }) => isActive ? styles.linkActive : undefined } to="/">Home</NavLink>
+                <NavLink className={({ isActive }) => isActive ? styles.linkActive : undefined } to="/about">About</NavLink>
+                <NavLink className={({ isActive }) => isActive ? styles.linkActive : undefined } to="/favorite">Favorite</NavLink>
             </div>
            
         </nav>
