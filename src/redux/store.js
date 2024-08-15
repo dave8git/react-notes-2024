@@ -9,6 +9,7 @@ import searchStringReducer from './searchStringRedux';
 export const addColumn = payload => ({ type: 'ADD_COLUMN', payload });
 export const addList = payload => ({ type: 'ADD_LIST', payload });
 export const addCard = payload => ({ type: 'ADD_CARD', payload });
+export const deleteCard = payload => ({ type: 'DELETE_CARD', payload});
 export const addSearchString = payload => ({ type: 'UPDATE_SEARCHSTRING', payload });
 export const toggleCardFavorite = payload => ({ type: 'TOGGLE_CARD_FAVORITE', payload });
 
