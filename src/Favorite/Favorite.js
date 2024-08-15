@@ -1,6 +1,7 @@
 import PageTitle from '../PageTitle/PageTitle';
 import Card from '../Card/Card';
 import styles from './Favorite.module.scss';
+import { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { getFavorite } from '../redux/store';
 import { useNavigate } from 'react-router-dom';
@@ -9,7 +10,13 @@ import { useNavigate } from 'react-router-dom';
 const Favorite = () => {
     const navigate = useNavigate();
     const cards = useSelector(state => getFavorite(state));
-
+    console.log('cards', cards);
+    useEffect(() => {
+        if(cards.length === 0) {
+            navigate('/');
+        }
+    }, [cards, navigate])
+   
 
 
     console.log('cards', cards)
