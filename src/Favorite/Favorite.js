@@ -3,7 +3,7 @@ import Card from '../Card/Card';
 import styles from './Favorite.module.scss';
 import { useEffect } from 'react';
 import { useSelector } from 'react-redux';
-import { getFavorite } from '../redux/store';
+import { getFavorite } from '../redux/cardsRedux';
 import { useNavigate } from 'react-router-dom';
 
 
